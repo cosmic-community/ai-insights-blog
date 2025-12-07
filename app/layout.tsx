@@ -2,12 +2,16 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
 import CosmicBadge from '@/components/CosmicBadge'
+import type { Metadata } from 'next'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'AI Insights Blog',
   description: 'Exploring the rapid advancement of artificial intelligence and emerging technologies',
+  icons: {
+    icon: '/icon.svg', // Changed: Using SVG icon instead of corrupted favicon.ico
+  },
 }
 
 export default function RootLayout({
